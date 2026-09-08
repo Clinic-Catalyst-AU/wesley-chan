@@ -36,13 +36,34 @@ footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-t
 
 .btn{color:var(--cream)} header{background:var(--char)} header .brand{color:var(--lcream)} header .tag{color:rgba(242,237,228,.7)}
 header .mono{height:54px;display:block;margin:0 auto 10px} .warn{border-color:var(--gold);background:var(--sage-light)}
+
+.case .ba div{position:relative;overflow:hidden}
+.case .ba div img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.case .ba div span{position:relative;z-index:2;background:rgba(43,35,32,.6);color:#F4F0E9;padding:3px 8px}
+.mocknote{border:1px dashed var(--gold-deep);background:var(--cream-2);padding:14px 16px;margin:18px 0 22px;font-size:13px;line-height:1.6;color:#4A3F39}
+.pub{max-width:900px;margin:0 auto;padding:44px 20px 10px}
+.eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px}
+.gate{margin-top:10px}
+.gatehead{max-width:900px;margin:40px auto 0;padding:0 20px}
 </style>
 </head>
 <body>
-<header><img class="mono" src="assets/brand/faith-monogram-cream.svg" alt=""><div class="brand">Dr Wesley Chan</div><div class="tag">Private results gallery &middot; shared after consultation</div></header>
+<header><img class="mono" src="assets/brand/faith-monogram-cream.svg" alt=""><div class="brand">Dr Wesley Chan</div><div class="tag">Results &middot; body transformation and cosmetic medicine</div></header>
 
+<div class="pub" id="body">
+  <div class="eyebrow">Body transformation &middot; Evolve X</div>
+  <h2>Fat, skin and muscle, one area at a time.</h2>
+  <p>Evolve X results can be shown openly. This gallery only ever holds patients of Dr Wesley Chan, shared with their consent, with the number of sessions noted. Results vary from person to person, and suitability is decided at your doctor-led consultation.</p>
+  <div class="mocknote"><strong>Concept note for Dr Wesley.</strong> The images on this page are computer-generated placeholders so you can see how the gallery reads. They are not patients and they are not results. Your own consented before and afters replace them.</div>
+  <div class="grid">
+    <div class="case"><div class="k">Evolve X &middot; Tummy</div><h3>After the weight, the tummy</h3><div class="ba"><div><img src="assets/ba/tummy-before.jpg" alt="Generated placeholder, before"><span>Before</span></div><div><img src="assets/ba/tummy-after.jpg" alt="Generated placeholder, after"><span>After</span></div></div><p>Placeholder image. Fat, skin and muscle treated together over a course of six to eight sessions, one area at a time.</p></div>
+    <div class="case"><div class="k">Evolve X &middot; Flanks</div><h3>The stubborn sides</h3><div class="ba"><div><img src="assets/ba/flanks-before.jpg" alt="Generated placeholder, before"><span>Before</span></div><div><img src="assets/ba/flanks-after.jpg" alt="Generated placeholder, after"><span>After</span></div></div><p>Placeholder image. Flanks and love handles, treated as their own area once the tummy has had its course.</p></div>
+    <div class="case"><div class="k">Evolve X &middot; Arms</div><h3>Firmer, tighter arms</h3><div class="ba"><div><img src="assets/ba/arms-before.jpg" alt="Generated placeholder, before"><span>Before</span></div><div><img src="assets/ba/arms-after.jpg" alt="Generated placeholder, after"><span>After</span></div></div><p>Placeholder image. Skin laxity and fullness on the upper arm, a common request after significant weight loss.</p></div>
+  </div>
+</div>
+<div class="gatehead"><div class="eyebrow">Cosmetic medicine &middot; shared after consultation</div><h2>The part we show you in the room.</h2><p>Cosmetic medicine results involve prescription-only treatments, so in line with Australian advertising rules they are shared after a consultation, with a code from Dr Wesley.</p></div>
 <div class="gate" id="gate">
-  <h1>Just for you.</h1>
+  <h1>Enter your code.</h1>
   <p>This gallery is shared with patients after a consultation, in line with Australian advertising rules for prescription-only cosmetic treatments. Enter the code from your consultation to view.</p>
   <input id="code" type="password" placeholder="Access code" onkeydown="if(event.key==='Enter')unlock()">
   <button class="btn" onclick="unlock()">View gallery</button>
@@ -51,13 +72,13 @@ header .mono{height:54px;display:block;margin:0 auto 10px} .warn{border-color:va
 
 <div class="wrap" id="gallery" hidden>
   <h2>Results from the Sunnybank clinic</h2>
-  <p>Every result here is a patient of Dr Wesley Chan, shared with their consent. Results vary from person to person, and what is right for you is decided together in your consultation.</p>
+  <p>This gallery only ever holds patients of Dr Wesley Chan, shared with their consent. Results vary from person to person, and what is right for you is decided together in your consultation.</p>
   <div class="warn">These images show prescription-only cosmetic treatments performed by Dr Wesley Chan. They are provided for information after consultation only and are not an offer or inducement. Individual results vary.</div>
   <div class="grid">
-    <div class="case"><div class="k">Case 01 &middot; Anti-wrinkle</div><h3>Softer lines, still you</h3><div class="ba"><div>Before</div><div>After</div></div><p>Patient photos drop in here once consent is confirmed. Concern-led caption, treatment named only after the consult.</p></div>
-    <div class="case"><div class="k">Case 02 &middot; Skin boosters</div><h3>Hydration back in the skin</h3><div class="ba"><div>Before</div><div>After</div></div><p>Placeholder for a consented before and after. The gallery grows as cases are added from the clinic.</p></div>
-    <div class="case"><div class="k">Case 03 &middot; Filler</div><h3>Restoring what the weight took with it</h3><div class="ba"><div>Before</div><div>After</div></div><p>Placeholder for a consented before and after. Facial volume after significant weight loss is a common conversation in this clinic.</p></div>
-    <div class="case"><div class="k">Case 04 &middot; Fat dissolving</div><h3>The pocket that would not go</h3><div class="ba"><div>Before</div><div>After</div></div><p>Placeholder for a consented before and after.</p></div>
+    <div class="case"><div class="k">Cosmetic medicine &middot; Lower face</div><h3>Restoring what the weight took with it</h3><div class="ba"><div><img src="assets/ba/lowerface-before.jpg" alt="Generated placeholder, before"><span>Before</span></div><div><img src="assets/ba/lowerface-after.jpg" alt="Generated placeholder, after"><span>After</span></div></div><p>Placeholder image. Facial volume and definition after significant weight loss, decided at consultation.</p></div>
+    <div class="case" id="c-eyes"><div class="k">Cosmetic medicine &middot; Around the eyes</div><h3>Softer lines, still you</h3><div class="ba"><div><img src="assets/ba/eyes-before.jpg" alt="Generated placeholder, before"><span>Before</span></div><div><img src="assets/ba/eyes-after.jpg" alt="Generated placeholder, after"><span>After</span></div></div><p>Placeholder image. Concern-led caption, treatment discussed only in your consultation.</p></div>
+    <div class="case" id="c-neck"><div class="k">Cosmetic medicine &middot; Under the chin</div><h3>The pocket that would not go</h3><div class="ba"><div><img src="assets/ba/neck-before.jpg" alt="Generated placeholder, before"><span>Before</span></div><div><img src="assets/ba/neck-after.jpg" alt="Generated placeholder, after"><span>After</span></div></div><p>Placeholder image. The fullness under the chin that diet did not shift, discussed at consultation.</p></div>
+    <div class="case"><div class="k">Cosmetic medicine &middot; Skin</div><h3>Hydration back in the skin</h3><div class="ba"><div>Before</div><div>After</div></div><p>Consented patient photo drops in here. The gallery grows as cases are added from the clinic.</p></div>
   </div>
 </div>
 <footer>Demo built by Clinic Catalyst for Dr Wesley Chan &middot; not indexed</footer>
