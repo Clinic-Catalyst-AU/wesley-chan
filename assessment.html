@@ -7,7 +7,7 @@
 <title>Dr Wesley Chan - Where do I start?</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#B6933A;--gold-deep:#8F7229;--char:#1C1C1C;--char-2:#2A2A2A;--cream:#F7F4EE;--cream-2:#ECE6DA;--ink:#1C1C1C;--white:#FFFFFF;}
+:root{--gold:#8A9A7E;--gold-deep:#5F7055;--char:#493829;--char-2:#5C4A3A;--cream:#F5F0E8;--cream-2:#E8E0D2;--ink:#2B2320;--white:#FFFFFF;--pink:#E4106E;--pink-deep:#C50D5F;--sage-light:#DDE3D6;--lcream:#F2EDE4;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
 header{padding:24px;text-align:center;background:var(--char);color:var(--cream)}
@@ -39,10 +39,15 @@ input:focus{outline:none;border-color:var(--gold)}
 footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A8D8E}
 [hidden]{display:none!important}
 @media (max-width:560px){.card{padding:32px 22px}h1{font-size:34px}h2{font-size:26px}}
+
+.btn{color:var(--cream)} .btn.gold{background:var(--pink);color:#fff} .btn.gold:hover{background:var(--pink-deep)}
+header{background:var(--char)} header .brand{color:var(--lcream)} header .tag{color:rgba(242,237,228,.7)}
+header .mono{height:54px;display:block;margin:0 auto 10px}
+.progress i{background:var(--pink)} .result{border-left-color:var(--gold)} .opt:hover{border-color:var(--gold)}
 </style>
 </head>
 <body>
-<header><div class="brand">Dr Wesley Chan</div><div class="tag">Weight loss and body transformation, led by a doctor &middot; Sunnybank, Brisbane</div></header>
+<header><img class="mono" src="assets/brand/faith-monogram-cream.svg" alt=""><div class="brand">Dr Wesley Chan</div><div class="tag">Weight loss and body transformation, led by a doctor &middot; Sunnybank, Brisbane</div></header>
 <main>
 <div class="card">
   <div class="progress"><i id="bar"></i></div>
@@ -126,10 +131,9 @@ footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-t
   </section>
 
   <section id="s7" hidden>
-    <div class="step">Your result</div>
-    <h2 id="rTitle">Here is what Dr Wes would look at first.</h2>
-    <div class="result"><p id="rBody"></p></div>
-    <p>Pop your details below and you will get a short note from Dr Wes, plus the next step. Everything starts with a doctor-led consultation, and nothing is decided before it.</p>
+    <div class="step">Last step</div>
+    <h2 id="rTitle">Submit your details for Dr Wes's best hacks to support your weight loss journey.</h2>
+    <p>Your plan lands in your inbox and your texts straight away: three things you can do at home right now, what Dr Wes would look at first, and your invitation to book your consultation.</p>
     <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
     <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
     <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
@@ -139,9 +143,10 @@ footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-t
 
   <section id="s8" hidden>
     <div class="step">Thank you</div>
-    <h2>Dr Wes has it. Here is the next step.</h2>
-    <p class="lead">Everyone starts with a doctor-led consultation at the Sunnybank clinic. You will get a text shortly with times to choose from. Bring your questions, and anything you have tried before.</p>
-    <a class="btn" href="#" onclick="return false">Book my consultation</a>
+    <h2>Check your texts and your inbox.</h2>
+    <div class="result"><p id="rBody"></p></div>
+    <p class="lead">Three things you can do at home today have just gone to you by text and email, with your invitation to book. Everyone starts with a doctor-led consultation at the Sunnybank clinic, and nothing is decided before it.</p>
+    <a class="btn" href="website.html#consult">Book my consultation</a>
     <p class="note">Shop 2/95 Mains Rd, Sunnybank &middot; One doctor for the whole journey</p>
   </section>
 </div>
@@ -153,12 +158,14 @@ function go(n){for(let i=0;i<=8;i++){const s=document.getElementById('s'+i);if(s
 function pick(k,v){a[k]=v;const order={stage:2,tried:3,concern:4,length:5,why:6,when:7};if(k==='when')render();go(order[k])}
 function render(){
   const map={
-    start:"Not knowing where to start is the most common reason people walk into the clinic, and it is a good reason. The first appointment is a proper medical look at why: history, metabolism, medications, sleep, what your body is actually doing. Then a plan that fits your life, not a diet sheet.",
+    start:"Not knowing where to start is the most common reason people walk into the clinic, and it is a good reason. The first appointment is a proper medical look at why: history, metabolism, medications, sleep, what your body is actually doing. Then a plan that fits your life.",
     tried:"If you have done the diets and the exercise properly and the weight still will not move, willpower is not the problem. Something underneath needs a doctor's eyes: hormones, metabolism, medication history. That is exactly what the consultation is for, and there are medical options a beauty clinic cannot offer.",
     after:"This is the part of the journey most clinics cannot do. Loose skin, stubborn pockets and lost muscle tone after weight loss respond to a combination of approaches, and Dr Wes looks at all of them in one room, from body contouring to the medical side.",
-    post:"Muscle separation and a weak core after pregnancy are a physical problem, not a fitness failure. Dr Wes will assess what has happened and whether body contouring that rebuilds muscle and tightens skin is appropriate, and when.",
+    post:"Muscle separation and a weak core after pregnancy are a physical problem with a physical answer. Dr Wes will assess what has happened and whether body contouring that rebuilds muscle and tightens skin is appropriate, and when.",
     surgery:"Dr Wes works alongside a bariatric surgeon, so he sees both sides: what to do before surgery, and how to look after the body afterwards. The consultation maps where you are and what the right next step is, whether that is medical, surgical support or the skin and shape afterwards."
   };
+  const labels={start:"your weight loss journey",tried:"the weight that will not shift",after:"your skin and shape after weight loss",post:"your core after pregnancy",surgery:"your journey around bariatric surgery"};
+  document.getElementById('rTitle').textContent="Submit your details for Dr Wes's best hacks to support "+(labels[a.stage]||"your weight loss journey")+".";
   document.getElementById('rBody').textContent=map[a.stage]||map.start;
   if(a.tried==='clinic')document.getElementById('rBody').textContent+=" You mentioned treatments at a beauty clinic. The difference here is a doctor who can look at the medical picture as well as the machine.";
 }
