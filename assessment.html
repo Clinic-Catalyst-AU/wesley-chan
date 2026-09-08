@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dr Wesley Chan - Where do I start?</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#B6933A;--gold-deep:#8F7229;--char:#1C1C1C;--char-2:#2A2A2A;--cream:#F7F4EE;--cream-2:#ECE6DA;--ink:#1C1C1C;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+header{padding:24px;text-align:center;background:var(--char);color:var(--cream)}
+header .brand{font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+header .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,244,238,.7);margin-top:6px}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 20px}
+.card{background:var(--white);width:100%;max-width:640px;padding:44px 40px;border:1px solid rgba(28,28,28,.08);box-shadow:0 20px 60px rgba(28,28,28,.08)}
+.progress{height:4px;background:var(--cream-2);margin-bottom:28px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s ease}
+.step{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--char);line-height:1.15}
+h1{font-size:42px;margin-bottom:14px}
+h2{font-size:32px;margin-bottom:22px}
+p{font-size:15px;line-height:1.7;color:#4A4A4A}
+.lead{margin-bottom:28px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;background:var(--cream);border:1px solid rgba(28,28,28,.1);padding:16px 18px;font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all .15s}
+.opt:hover{border-color:var(--gold);background:var(--cream-2);transform:translateX(3px)}
+.btn{display:inline-block;background:var(--char);color:var(--gold);border:none;padding:16px 34px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;margin-top:8px}
+.btn:hover{background:var(--char-2)}
+.btn.gold{background:var(--gold);color:var(--char)}
+label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--char);margin:14px 0 6px}
+input{width:100%;padding:14px 16px;border:1px solid rgba(28,28,28,.2);background:var(--cream);font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink)}
+input:focus{outline:none;border-color:var(--gold)}
+.back{background:none;border:none;color:#8A8D8E;font-size:12px;letter-spacing:.1em;cursor:pointer;margin-top:18px;font-family:'Montserrat',sans-serif}
+.result{border-left:3px solid var(--gold);padding:14px 18px;background:var(--cream);margin:18px 0 22px}
+.result p{font-size:15px}
+.note{font-size:13px;color:#6B6E6F;margin-top:18px;line-height:1.6}
+footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A8D8E}
+[hidden]{display:none!important}
+@media (max-width:560px){.card{padding:32px 22px}h1{font-size:34px}h2{font-size:26px}}
+</style>
+</head>
+<body>
+<header><div class="brand">Dr Wesley Chan</div><div class="tag">Weight loss and body transformation, led by a doctor &middot; Sunnybank, Brisbane</div></header>
+<main>
+<div class="card">
+  <div class="progress"><i id="bar"></i></div>
+
+  <section id="s0">
+    <div class="step">60 seconds &middot; No judgement</div>
+    <h1>Where do I start?</h1>
+    <p class="lead">Six quick questions about where you are and what you have tried. Dr Wes reads every one and tells you what he would look at first. Nothing is prescribed here, and nothing is sold. It is the beginning of a conversation with a doctor.</p>
+    <button class="btn" onclick="go(1)">Start</button>
+  </section>
+
+  <section id="s1" hidden>
+    <div class="step">1 of 6</div>
+    <h2>Where are you in your journey right now?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('stage','start')">I want to lose weight and I honestly do not know where to start</button>
+      <button class="opt" onclick="pick('stage','tried')">I have tried diet and exercise, properly, and the weight will not shift</button>
+      <button class="opt" onclick="pick('stage','after')">I have lost weight and now the skin or shape is not following</button>
+      <button class="opt" onclick="pick('stage','post')">I have had a baby and my core and tummy have not recovered</button>
+      <button class="opt" onclick="pick('stage','surgery')">I am considering, or have had, bariatric surgery</button>
+    </div>
+  </section>
+
+  <section id="s2" hidden>
+    <div class="step">2 of 6</div>
+    <h2>What have you tried so far?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('tried','nothing')">Nothing structured yet</button>
+      <button class="opt" onclick="pick('tried','diets')">Diets and exercise programmes, more than one</button>
+      <button class="opt" onclick="pick('tried','gp')">I have spoken to a GP about medication</button>
+      <button class="opt" onclick="pick('tried','clinic')">Body contouring or treatments at a beauty clinic</button>
+    </div>
+    <button class="back" onclick="go(1)">&larr; Back</button>
+  </section>
+
+  <section id="s3" hidden>
+    <div class="step">3 of 6</div>
+    <h2>What bothers you most?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('concern','stuck')">The number will not move no matter what I do</button>
+      <button class="opt" onclick="pick('concern','pockets')">Stubborn areas: tummy, flanks, arms, inner thighs</button>
+      <button class="opt" onclick="pick('concern','loose')">Loose skin where the weight used to be</button>
+      <button class="opt" onclick="pick('concern','core')">A weak core or separated muscles after pregnancy</button>
+      <button class="opt" onclick="pick('concern','energy')">Tired, frustrated, and not sure who to trust</button>
+    </div>
+    <button class="back" onclick="go(2)">&larr; Back</button>
+  </section>
+
+  <section id="s4" hidden>
+    <div class="step">4 of 6</div>
+    <h2>How long has this been going on?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('length','months')">A few months</button>
+      <button class="opt" onclick="pick('length','year')">About a year</button>
+      <button class="opt" onclick="pick('length','years')">Years. It has become normal</button>
+    </div>
+    <button class="back" onclick="go(3)">&larr; Back</button>
+  </section>
+
+  <section id="s5" hidden>
+    <div class="step">5 of 6</div>
+    <h2>If this were sorted, what would change?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('why','health')">My health. I want to get ahead of what is coming</button>
+      <button class="opt" onclick="pick('why','clothes')">I would wear what I want to wear</button>
+      <button class="opt" onclick="pick('why','confidence')">I would feel like myself again</button>
+      <button class="opt" onclick="pick('why','done')">I would stop starting over every January</button>
+    </div>
+    <button class="back" onclick="go(4)">&larr; Back</button>
+  </section>
+
+  <section id="s6" hidden>
+    <div class="step">6 of 6</div>
+    <h2>When would you like to talk to a doctor about it?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pick('when','now')">As soon as possible</button>
+      <button class="opt" onclick="pick('when','month')">In the next month or so</button>
+      <button class="opt" onclick="pick('when','looking')">Just finding out what is possible for now</button>
+    </div>
+    <button class="back" onclick="go(5)">&larr; Back</button>
+  </section>
+
+  <section id="s7" hidden>
+    <div class="step">Your result</div>
+    <h2 id="rTitle">Here is what Dr Wes would look at first.</h2>
+    <div class="result"><p id="rBody"></p></div>
+    <p>Pop your details below and you will get a short note from Dr Wes, plus the next step. Everything starts with a doctor-led consultation, and nothing is decided before it.</p>
+    <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
+    <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
+    <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
+    <button class="btn gold" onclick="submitLead()">Send to Dr Wes</button>
+    <p class="note">By sending, you agree to hear from Faith Cosmetic &amp; Weight Loss by text and email. Unsubscribe any time. This assessment is general information only and is not medical advice; suitability for any treatment is decided at consultation.</p>
+  </section>
+
+  <section id="s8" hidden>
+    <div class="step">Thank you</div>
+    <h2>Dr Wes has it. Here is the next step.</h2>
+    <p class="lead">Everyone starts with a doctor-led consultation at the Sunnybank clinic. You will get a text shortly with times to choose from. Bring your questions, and anything you have tried before.</p>
+    <a class="btn" href="#" onclick="return false">Book my consultation</a>
+    <p class="note">Shop 2/95 Mains Rd, Sunnybank &middot; One doctor for the whole journey</p>
+  </section>
+</div>
+</main>
+<footer>Demo built by Clinic Catalyst for Dr Wesley Chan</footer>
+<script>
+const a={};
+function go(n){for(let i=0;i<=8;i++){const s=document.getElementById('s'+i);if(s)s.hidden=(i!==n)}document.getElementById('bar').style.width=Math.min(100,Math.round((n/7)*100))+'%';window.scrollTo({top:0,behavior:'smooth'})}
+function pick(k,v){a[k]=v;const order={stage:2,tried:3,concern:4,length:5,why:6,when:7};if(k==='when')render();go(order[k])}
+function render(){
+  const map={
+    start:"Not knowing where to start is the most common reason people walk into the clinic, and it is a good reason. The first appointment is a proper medical look at why: history, metabolism, medications, sleep, what your body is actually doing. Then a plan that fits your life, not a diet sheet.",
+    tried:"If you have done the diets and the exercise properly and the weight still will not move, willpower is not the problem. Something underneath needs a doctor's eyes: hormones, metabolism, medication history. That is exactly what the consultation is for, and there are medical options a beauty clinic cannot offer.",
+    after:"This is the part of the journey most clinics cannot do. Loose skin, stubborn pockets and lost muscle tone after weight loss respond to a combination of approaches, and Dr Wes looks at all of them in one room, from body contouring to the medical side.",
+    post:"Muscle separation and a weak core after pregnancy are a physical problem, not a fitness failure. Dr Wes will assess what has happened and whether body contouring that rebuilds muscle and tightens skin is appropriate, and when.",
+    surgery:"Dr Wes works alongside a bariatric surgeon, so he sees both sides: what to do before surgery, and how to look after the body afterwards. The consultation maps where you are and what the right next step is, whether that is medical, surgical support or the skin and shape afterwards."
+  };
+  document.getElementById('rBody').textContent=map[a.stage]||map.start;
+  if(a.tried==='clinic')document.getElementById('rBody').textContent+=" You mentioned treatments at a beauty clinic. The difference here is a doctor who can look at the medical picture as well as the machine.";
+}
+function submitLead(){const fn=document.getElementById('fn').value.trim(),mob=document.getElementById('mob').value.trim();if(!fn||!mob){alert('Just your first name and mobile so Dr Wes can reach you.');return}console.log('lead',{...a,fn,mob,em:document.getElementById('em').value});go(8)}
+</script>
+</body>
+</html>

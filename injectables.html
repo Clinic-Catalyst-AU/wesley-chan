@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dr Wesley Chan - Private Results Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#B6933A;--gold-deep:#8F7229;--char:#1C1C1C;--cream:#F7F4EE;--cream-2:#ECE6DA;--ink:#1C1C1C;--white:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
+header{padding:24px;text-align:center;background:var(--char)}
+header .brand{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+header .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,244,238,.7);margin-top:6px}
+.wrap{max-width:900px;margin:0 auto;padding:40px 20px 60px}
+.gate{background:var(--white);max-width:520px;margin:40px auto;padding:44px 40px;border:1px solid rgba(28,28,28,.08);box-shadow:0 20px 60px rgba(28,28,28,.08);text-align:center}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--char);line-height:1.15}
+h1{font-size:38px;margin-bottom:12px}
+h2{font-size:30px;margin-bottom:10px}
+h3{font-size:22px;margin-bottom:6px}
+p{font-size:15px;line-height:1.7;color:#4A4A4A}
+input{width:100%;padding:14px 16px;border:1px solid rgba(28,28,28,.2);background:var(--cream);font-family:'Montserrat',sans-serif;font-size:15px;margin:18px 0 12px;text-align:center;letter-spacing:.1em}
+input:focus{outline:none;border-color:var(--gold)}
+.btn{display:inline-block;background:var(--char);color:var(--gold);border:none;padding:15px 32px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.err{color:#B4534A;font-size:13px;margin-top:10px;display:none}
+.warn{border:1px solid var(--gold);background:var(--cream-2);padding:16px 20px;margin:24px 0 32px;font-size:13px;line-height:1.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.case{background:var(--white);border:1px solid rgba(28,28,28,.08);padding:26px}
+.case .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px}
+.case .ba{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.case .ba div{aspect-ratio:4/5;background:linear-gradient(160deg,var(--cream),var(--cream-2));display:flex;align-items:flex-end;padding:10px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--char)}
+footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A8D8E}
+[hidden]{display:none!important}
+@media (max-width:640px){.grid{grid-template-columns:1fr}.gate{padding:32px 22px}}
+</style>
+</head>
+<body>
+<header><div class="brand">Dr Wesley Chan</div><div class="tag">Private results gallery &middot; shared after consultation</div></header>
+
+<div class="gate" id="gate">
+  <h1>Just for you.</h1>
+  <p>This gallery is shared with patients after a consultation, in line with Australian advertising rules for prescription-only cosmetic treatments. Enter the code from your consultation to view.</p>
+  <input id="code" type="password" placeholder="Access code" onkeydown="if(event.key==='Enter')unlock()">
+  <button class="btn" onclick="unlock()">View gallery</button>
+  <p class="err" id="err">That code does not match. Check the note from your consultation.</p>
+</div>
+
+<div class="wrap" id="gallery" hidden>
+  <h2>Results from the Sunnybank clinic</h2>
+  <p>Every result here is a patient of Dr Wesley Chan, shared with their consent. Results vary from person to person, and what is right for you is decided together in your consultation.</p>
+  <div class="warn">These images show prescription-only cosmetic treatments performed by Dr Wesley Chan. They are provided for information after consultation only and are not an offer or inducement. Individual results vary.</div>
+  <div class="grid">
+    <div class="case"><div class="k">Case 01 &middot; Anti-wrinkle</div><h3>Softer lines, still you</h3><div class="ba"><div>Before</div><div>After</div></div><p>Patient photos drop in here once consent is confirmed. Concern-led caption, treatment named only after the consult.</p></div>
+    <div class="case"><div class="k">Case 02 &middot; Skin boosters</div><h3>Hydration back in the skin</h3><div class="ba"><div>Before</div><div>After</div></div><p>Placeholder for a consented before and after. The gallery grows as cases are added from the clinic.</p></div>
+    <div class="case"><div class="k">Case 03 &middot; Filler</div><h3>Restoring what the weight took with it</h3><div class="ba"><div>Before</div><div>After</div></div><p>Placeholder for a consented before and after. Facial volume after significant weight loss is a common conversation in this clinic.</p></div>
+    <div class="case"><div class="k">Case 04 &middot; Fat dissolving</div><h3>The pocket that would not go</h3><div class="ba"><div>Before</div><div>After</div></div><p>Placeholder for a consented before and after.</p></div>
+  </div>
+</div>
+<footer>Demo built by Clinic Catalyst for Dr Wesley Chan &middot; not indexed</footer>
+<script>
+function unlock(){const v=document.getElementById('code').value.trim().toLowerCase();if(v==='wesley-chan2026'||v==='wesleychan2026'){document.getElementById('gate').hidden=true;document.getElementById('gallery').hidden=false}else{document.getElementById('err').style.display='block'}}
+</script>
+</body>
+</html>
