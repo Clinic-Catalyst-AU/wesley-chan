@@ -162,6 +162,9 @@ footer .fine{border-top-color:rgba(242,237,228,.15)}
 .tile p{font-size:13px;color:rgba(242,237,228,.75);line-height:1.5;margin:0}
 header.hero .tag{margin:22px 0 0}
 .sub-h{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.2vw,26px);color:var(--gold-deep);margin:-8px 0 20px;line-height:1.3}
+video.portrait{background:#000}
+header.hero video.bg{width:100%;height:100%;object-fit:cover;object-position:center 40%;background:none;opacity:.42}
+@media (prefers-reduced-motion:reduce){header.hero video.bg{display:none}}
 </style>
 </head>
 <body>
@@ -169,34 +172,36 @@ header.hero .tag{margin:22px 0 0}
 <nav>
   <div class="wrap">
     <a class="logo" href="#top"><img src="assets/brand/faith-monogram-cream.svg" alt="Faith Cosmetic and Weight Loss"><span>Dr Wesley Chan</span></a>
-    <ul><li><a href="#start">Start here</a></li><li><a href="#journey">The journey</a></li><li><a href="#evolvex">Body contouring</a></li><li><a href="#drwes">Dr Wes</a></li><li><a class="cta" href="assessment.html">Free 60-second assessment</a></li></ul>
+    <ul><li><a href="#start">Start here</a></li><li><a href="#journey">The journey</a></li><li><a href="#evolvex">Body contouring</a></li><li><a href="#drwes">Dr Wesley</a></li><li><a class="cta" href="assessment.html">Free 60-second assessment</a></li></ul>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="bg"></div><div class="scrim"></div>
+  <div class="bg"></div>
+  <video class="bg" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+  <div class="scrim"></div>
   <div class="wrap">
     <div>
       <div class="eyebrow">Weight loss and body transformation &middot; Sunnybank, Brisbane</div>
-      <h1>Brisbane's complete body transformation solution, <em>led by a doctor.</em></h1>
-      <p class="tag">One doctor, the whole journey, in one room.</p>
+      <h1>Brisbane's complete body transformation solution, <em>led by Dr Wesley Chan</em></h1>
+      <p class="tag">Finally! Weight Loss support that actually works.</p>
       <div class="tiles">
         <div class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg><div><h4>Weight and metabolic health</h4><p>Medication and diet review, from "where do I start" onward.</p></div></div>
         <div class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8c2.5-2 5.5-2 8 0s5.5 2 8 0"/><path d="M4 12c2.5-2 5.5-2 8 0s5.5 2 8 0"/><path d="M4 16c2.5-2 5.5-2 8 0s5.5 2 8 0"/></svg><div><h4>Body contouring</h4><p>Evolve X for fat, skin and muscle, one area at a time.</p></div></div>
         <div class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 4-8 4-8-4 8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 16l8 4 8-4"/></svg><div><h4>Skin after the weight</h4><p>Loose skin, muscle separation, scars after surgery.</p></div></div>
-        <div class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20 20"/><path d="M10.5 8v5M8 10.5h5"/></svg><div><h4>Cosmetic medicine and skin checks</h4><p>Injectables, medical skin, skin cancer checks. Same doctor.</p></div></div>
+        <div class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20 20"/><path d="M10.5 8v5M8 10.5h5"/></svg><div><h4>Cosmetic medicine and skin checks</h4><p>Cosmetic medicine, medical skin, skin cancer checks. Same doctor.</p></div></div>
       </div>
       <div class="twodoor"><a class="btn gold" href="assessment.html">Not sure where to start? Take the assessment</a><p class="tdsub">Been here before? <a href="#consult">Book your consultation</a></p></div>
     </div>
     <div class="hform" id="hero-form">
       <div class="k">In your own words</div>
       <h3>I don't know where to start.</h3>
-      <p>That is the most common reason people walk in. Tell Dr Wes where you are and he will tell you what he would look at first.</p>
+      <p>That is the most common reason people walk in. Tell Dr Wesley where you are and he will tell you what he would look at first.</p>
       <form onsubmit="event.preventDefault();this.innerHTML='<p style=font-size:15px;color:#3E3E3E;padding:20px 0>Thank you. You will get a text shortly with consultation times to choose from.</p>'">
         <div class="row"><div><label>First name</label><input type="text" placeholder="Your first name" required></div><div><label>Mobile</label><input type="tel" placeholder="04.." required></div></div>
         <label>Email</label><input type="email" placeholder="you@email.com">
         <label>Where are you in your journey?</label><select><option>I want to lose weight and do not know where to start</option><option>Tried diet and exercise, the weight will not shift</option><option>Lost weight, the skin or shape is not following</option><option>After a baby, my core and tummy have not recovered</option><option>Considering or had bariatric surgery</option><option>Something else</option></select>
-        <button class="btn" type="submit">Send to Dr Wes</button>
+        <button class="btn" type="submit">Send to Dr Wesley</button>
         <p class="fine">Everything starts with a doctor-led consultation. Nothing is prescribed or decided before it. By sending you agree to hear from the clinic by text and email.</p>
       </form>
     </div>
@@ -209,12 +214,12 @@ header.hero .tag{margin:22px 0 0}
       <div class="eyebrow">Start with a doctor</div>
       <h2>Time for a plan from a care-based practitioner who is incredibly experienced in this area.</h2>
       <p class="sub-h">Because weight loss is not one size fits all.</p>
-      <p class="lead">If you are exhausted and fed up, you have been told to move more and eat less, you have done exactly that, and the weight still will not move, willpower is not the problem. For many women there is a hormonal connection underneath: perimenopause, insulin resistance, thyroid, sleep, the medications you are already on. A diet sheet looks at none of it. A GP does.</p>
-      <p class="lead" style="margin-top:18px">Dr Wes builds a GP-led, holistic plan from every factor at once, because he knows weight loss is not a one size fits all recipe. You are told <em>exactly</em> what to do, it fits your body and your life, and it is reviewed by the doctor who wrote it. You are safe here, you are cared for, and the results you have been chasing alone for far too long finally have a plan behind them.</p>
+      <p class="lead">If you are exhausted and fed up, you have been told to move more and eat less, you have done exactly that, and the weight still will not move, willpower is not the problem. Weight loss is often not a calories in, calories out process. When hormones are out, when insulin resistance is there, when the stress load is high or oestrogen is high, the body holds weight regardless of calories. So many perimenopausal women describe adding 15 kilos through menopause with nothing about their diet or exercise having changed. A diet sheet looks at none of it. A GP does.</p>
+      <p class="lead" style="margin-top:18px">Dr Wesley builds a GP-led, holistic plan from every factor at once, because he knows weight loss is not a one size fits all recipe. You are told <em>exactly</em> what to do, it fits your body and your life, and it is reviewed by the doctor who wrote it. You are safe here, you are cared for, and the results you have been chasing alone for far too long finally have a plan behind them.</p>
       <p class="lead" style="margin-top:18px">And because he runs the body contouring and the skin side too, the whole journey stays with the same doctor.</p>
       <div class="twodoor light"><a class="btn gold" href="assessment.html">Not sure where to start? Take the assessment</a><p class="tdsub">Been here before? <a href="#consult">Book your consultation</a></p></div>
     </div>
-    <div><img class="photo" src="assets/consult.jpg" alt="Consultation"><div class="statement" style="margin-top:26px">"A one stop shop weight loss service from the moment the patient comes in, to whatever service they need."</div></div>
+    <div><img class="photo" src="assets/consult.jpg" alt="Consultation"><div class="statement" style="margin-top:26px">Holistic care from the very start of your weight loss journey, all the way through to the point where it becomes cosmetic. The same doctor at every step.</div></div>
   </div>
 </section>
 
@@ -222,7 +227,7 @@ header.hero .tag{margin:22px 0 0}
   <div class="wrap">
     <div class="eyebrow">The whole journey, one doctor</div>
     <h2>Wherever you are, this is the next step.</h2>
-    <p class="lead">Most people arrive at one of these four points. The plan is built around where you are, and it keeps going with you.</p>
+    <p class="lead">Holistic care from the first consultation, through the medical work, to the point where the journey becomes cosmetic. The plan is built around where you are, and the same doctor carries it the whole way.</p>
     <div class="journey">
       <div class="jstep"><img src="assets/start.jpg" alt="Where do I start"><div class="n">01</div><h3>Where do I start?</h3><p>A medical look at why, then a plan that fits your life: diet review, metabolic support, and medication where it is appropriate for you.</p></div>
       <div class="jstep"><img src="assets/plan.jpg" alt="Medication and diet review"><div class="n">02</div><h3>Medication and diet review</h3><p>Prescription weight management, reviewed by the doctor who prescribed it, with support alongside bariatric surgery where that is the path.</p></div>
@@ -254,11 +259,11 @@ header.hero .tag{margin:22px 0 0}
 <section id="skin">
   <div class="wrap">
     <div class="eyebrow">Skin and cosmetic medicine</div>
-    <h2>Skin, injectables and skin checks. Same doctor.</h2>
-    <p class="lead">Once the weight is where you want it, the face and skin often need attention too. And because Dr Wes is a GP as well as a cosmetic doctor, the medical and the cosmetic are looked at together.</p>
+    <h2>Skin, cosmetic medicine and skin checks. Same doctor.</h2>
+    <p class="lead">Once the weight is where you want it, the face and skin often need attention too. And because Dr Wesley is a GP as well as a cosmetic doctor, the medical and the cosmetic are looked at together.</p>
     <div class="grid3">
       <a class="concern" href="#consult"><div class="n">01</div><h3>Skin after weight loss</h3><p>Laxity, texture and volume changes that arrive when the weight leaves. Assessed as part of the journey.</p></a>
-      <a class="concern" href="#consult"><div class="n">02</div><h3>Anti-wrinkle, filler, skin boosters</h3><p>Doctor-performed cosmetic injectables. Options discussed at consultation, in line with Australian advertising rules.</p></a>
+      <a class="concern" href="#consult"><div class="n">02</div><h3>Cosmetic medicine</h3><p>Doctor-performed cosmetic medicine for the face. Options discussed at consultation, in line with Australian advertising rules.</p></a>
       <a class="concern" href="#consult"><div class="n">03</div><h3>Skin checks and medical skin</h3><p>Skin cancer checks and excision, acne from 18 up, pigmentation and melasma. The medical side other clinics send you elsewhere for.</p></a>
     </div>
   </div>
@@ -266,18 +271,18 @@ header.hero .tag{margin:22px 0 0}
 
 <section class="alt" id="drwes">
   <div class="wrap about">
-    <div><img class="portrait" src="assets/dr-wesley-portrait.jpg" alt="Dr Wesley Chan"></div>
+    <div><video class="portrait" autoplay muted loop playsinline preload="metadata" poster="assets/dr-wesley-portrait.jpg" aria-label="Dr Wesley Chan"><source src="assets/dr-wesley-loop.mp4" type="video/mp4"></video></div>
     <div>
-      <div class="eyebrow">Dr Wes</div>
+      <div class="eyebrow">Dr Wesley</div>
       <h2>A GP and cosmetic doctor with a special interest in weight loss and body transformation.</h2>
       <p class="lead">Dr Wesley Chan is a Fellow of the Royal Australian College of General Practitioners and a Medical Fellow of the Australasian College of Cosmetic Surgery and Medicine. He consults at a public hospital, lectures at the University of Queensland, and works alongside a bariatric surgeon looking after patients before and after surgery.</p>
       <p class="lead" style="margin-top:18px">He set up this clinic because the weight loss journey kept getting split between people who could prescribe and people who could treat the body. He does both, and he is the same doctor at every step.</p>
       <div class="creds"><div>BSc (Hons), Biochemistry</div><div>MBBS, University of Queensland</div><div>FRACGP</div><div>FACCSM (Med)</div><div>PGCertUS, Clinical Ultrasound</div><div>AHPRA registered medical practitioner</div></div>
       <div class="qa">
-        <details><summary>Do I need a referral?</summary><p>No. Book a consultation directly. If your journey involves surgery, Dr Wes works with the surgeon.</p></details>
+        <details><summary>Do I need a referral?</summary><p>No. Book a consultation directly. If your journey involves surgery, Dr Wesley works with the surgeon.</p></details>
         <details><summary>Will I be prescribed medication?</summary><p>Only if it is appropriate for you, and only after a proper medical consultation. Nothing is decided before you are seen, and nothing is advertised here.</p></details>
         <details><summary>I have already lost the weight. Is this still for me?</summary><p>Yes. The skin, shape and muscle afterwards are a large part of what this clinic does, and it is the part most clinics cannot offer.</p></details>
-        <details><summary>How many body contouring sessions will I need?</summary><p>Six to eight is the usual recommendation to see the initial result. Dr Wes will tell you what is realistic for you at consultation.</p></details>
+        <details><summary>How many body contouring sessions will I need?</summary><p>Six to eight is the usual recommendation to see the initial result. Dr Wesley will tell you what is realistic for you at consultation.</p></details>
       </div>
     </div>
   </div>
@@ -285,16 +290,16 @@ header.hero .tag{margin:22px 0 0}
 
 <section id="learn">
   <div class="wrap">
-    <div class="eyebrow">Learn</div>
-    <h2>Everything Dr Wes does, explained plainly.</h2>
-    <p class="lead">Short videos, one topic each, so you understand what is possible before you ever book.</p>
+    <div class="eyebrow">Hey Dr Wes...</div>
+    <h2>The questions everyone asks, answered in the clinic.</h2>
+    <p class="lead">Filmed between patients, as if we have just interrupted him. Short, straight answers, so you get to know how he thinks before you ever book.</p>
     <div class="edu">
-      <div class="vid"><div class="ph">Video</div><h3>Why the weight will not shift</h3><p>What a doctor looks at first, and why it is not about trying harder.</p></div>
-      <div class="vid"><div class="ph">Video</div><h3>Evolve X, one area at a time</h3><p>Fat, skin and muscle in one session, and why the order matters.</p></div>
-      <div class="vid"><div class="ph">Video</div><h3>Skin after weight loss</h3><p>Loose skin, stubborn pockets, and the options that do not involve surgery.</p></div>
-      <div class="vid"><div class="ph">Video</div><h3>Postpartum core recovery</h3><p>Muscle separation after babies, and when body contouring is appropriate.</p></div>
-      <div class="vid"><div class="ph">Video</div><h3>Before and after bariatric surgery</h3><p>What Dr Wes does alongside the surgeon, at both ends.</p></div>
-      <div class="vid"><div class="ph">Video</div><h3>Skin checks by a cosmetic doctor</h3><p>Why the medical and the cosmetic belong in the same room.</p></div>
+      <div class="vid"><div class="ph">Hey Dr Wes...</div><h3>Hey Dr Wes, why will the weight not shift?</h3><p>What a doctor looks at first, and why it is not about trying harder.</p></div>
+      <div class="vid"><div class="ph">Hey Dr Wes...</div><h3>Hey Dr Wes, does body contouring actually work?</h3><p>Fat, skin and muscle in one session, and why the order matters.</p></div>
+      <div class="vid"><div class="ph">Hey Dr Wes...</div><h3>Hey Dr Wes, what about the loose skin?</h3><p>Loose skin, stubborn pockets, and the options that do not involve surgery.</p></div>
+      <div class="vid"><div class="ph">Hey Dr Wes...</div><h3>Hey Dr Wes, will my core ever recover after babies?</h3><p>Muscle separation after babies, and when body contouring is appropriate.</p></div>
+      <div class="vid"><div class="ph">Hey Dr Wes...</div><h3>Hey Dr Wes, is surgery my only option?</h3><p>What Dr Wesley does alongside the surgeon, at both ends.</p></div>
+      <div class="vid"><div class="ph">Hey Dr Wes...</div><h3>Hey Dr Wes, can you check this spot?</h3><p>Why the medical and the cosmetic belong in the same room.</p></div>
     </div>
   </div>
 </section>
@@ -303,14 +308,14 @@ header.hero .tag{margin:22px 0 0}
   <div class="wrap">
     <div class="eyebrow">Book a consultation</div>
     <h2 style="margin:0 auto 14px;max-width:none">Start with a doctor.</h2>
-    <p class="lead" style="margin:0 auto">Tell Dr Wes where you are. You will get a text with consultation times to choose from, and the plan is built in the room.</p>
+    <p class="lead" style="margin:0 auto">Tell Dr Wesley where you are. You will get a text with consultation times to choose from, and the plan is built in the room.</p>
     <form onsubmit="event.preventDefault();this.innerHTML='<p class=lead style=text-align:center>Thank you. The clinic will text you shortly with times.</p>'">
       <div><label>First name</label><input type="text" placeholder="Your first name"></div>
       <div><label>Mobile</label><input type="tel" placeholder="04.."></div>
       <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
-      <div><label>Where are you in your journey?</label><select><option>I do not know where to start</option><option>Tried diet and exercise, will not shift</option><option>Lost weight, skin or shape not following</option><option>After a baby, core not recovered</option><option>Considering or had bariatric surgery</option><option>Skin, injectables or a skin check</option></select></div>
-      <div><label>Anything you want Dr Wes to know</label><textarea placeholder="What you have tried, how long, what bothers you most"></textarea></div>
-      <button class="btn" type="submit">Send to Dr Wes</button>
+      <div><label>Where are you in your journey?</label><select><option>I do not know where to start</option><option>Tried diet and exercise, will not shift</option><option>Lost weight, skin or shape not following</option><option>After a baby, core not recovered</option><option>Considering or had bariatric surgery</option><option>Skin, cosmetic medicine or a skin check</option></select></div>
+      <div><label>Anything you want Dr Wesley to know</label><textarea placeholder="What you have tried, how long, what bothers you most"></textarea></div>
+      <button class="btn" type="submit">Send to Dr Wesley</button>
     </form>
     <p class="tdsub" style="margin-top:22px;font-size:14px;color:#4A3F39">Not sure where to start? <a href="assessment.html" style="color:var(--char);text-decoration:underline">Take the 60-second assessment first</a></p>
     <p class="fine-p">Consultations are held at Shop 2/95 Mains Rd, Sunnybank. Individual results vary. Suitability for any treatment, including prescription medication, is decided at consultation.</p>

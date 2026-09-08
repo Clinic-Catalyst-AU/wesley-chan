@@ -55,7 +55,7 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
   <section id="s0">
     <div class="step">60 seconds &middot; No judgement</div>
     <h1>Where do I start?</h1>
-    <p class="lead">Six quick questions about where you are and what you have tried. Dr Wes reads every one and tells you what he would look at first. Nothing is prescribed here, and nothing is sold. It is the beginning of a conversation with a doctor.</p>
+    <p class="lead">Six quick questions about where you are and what you have tried. Dr Wesley reads every one and tells you what he would look at first. Nothing is prescribed here, and nothing is sold. It is the beginning of a conversation with a doctor.</p>
     <button class="btn" onclick="go(1)">Start</button>
   </section>
 
@@ -78,6 +78,8 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
       <button class="opt" onclick="pick('tried','nothing')">Nothing structured yet</button>
       <button class="opt" onclick="pick('tried','diets')">Diets and exercise programmes, more than one</button>
       <button class="opt" onclick="pick('tried','gp')">I have spoken to a GP about medication</button>
+      <button class="opt" onclick="pick('tried','glp1')">I am currently taking a GLP-1</button>
+      <button class="opt" onclick="pick('tried','meds')">I have tried weight loss medication before</button>
       <button class="opt" onclick="pick('tried','clinic')">Body contouring or treatments at a beauty clinic</button>
     </div>
     <button class="back" onclick="go(1)">&larr; Back</button>
@@ -91,6 +93,7 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
       <button class="opt" onclick="pick('concern','pockets')">Stubborn areas: tummy, flanks, arms, inner thighs</button>
       <button class="opt" onclick="pick('concern','loose')">Loose skin where the weight used to be</button>
       <button class="opt" onclick="pick('concern','core')">A weak core or separated muscles after pregnancy</button>
+      <button class="opt" onclick="pick('concern','hormones')">I think my hormones are part of this: perimenopause, thyroid, PCOS</button>
       <button class="opt" onclick="pick('concern','energy')">Tired, frustrated, and not sure who to trust</button>
     </div>
     <button class="back" onclick="go(2)">&larr; Back</button>
@@ -132,12 +135,12 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
 
   <section id="s7" hidden>
     <div class="step">Last step</div>
-    <h2 id="rTitle">Submit your details for Dr Wes's best hacks to support your weight loss journey.</h2>
-    <p>Your plan lands in your inbox and your texts straight away: three things you can do at home right now, what Dr Wes would look at first, and your invitation to book your consultation.</p>
+    <h2 id="rTitle">Submit your details for Dr Wesley's best hacks to support your weight loss journey.</h2>
+    <p>Your plan lands in your inbox and your texts straight away: three things you can do at home right now, what Dr Wesley would look at first, and your invitation to book your consultation.</p>
     <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
     <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
     <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
-    <button class="btn gold" onclick="submitLead()">Send to Dr Wes</button>
+    <button class="btn gold" onclick="submitLead()">Send to Dr Wesley</button>
     <p class="note">By sending, you agree to hear from Faith Cosmetic &amp; Weight Loss by text and email. Unsubscribe any time. This assessment is general information only and is not medical advice; suitability for any treatment is decided at consultation.</p>
   </section>
 
@@ -160,16 +163,19 @@ function render(){
   const map={
     start:"Not knowing where to start is the most common reason people walk into the clinic, and it is a good reason. The first appointment is a proper medical look at why: history, metabolism, medications, sleep, what your body is actually doing. Then a plan that fits your life.",
     tried:"If you have done the diets and the exercise properly and the weight still will not move, willpower is not the problem. Something underneath needs a doctor's eyes: hormones, metabolism, medication history. That is exactly what the consultation is for, and there are medical options a beauty clinic cannot offer.",
-    after:"This is the part of the journey most clinics cannot do. Loose skin, stubborn pockets and lost muscle tone after weight loss respond to a combination of approaches, and Dr Wes looks at all of them in one room, from body contouring to the medical side.",
-    post:"Muscle separation and a weak core after pregnancy are a physical problem with a physical answer. Dr Wes will assess what has happened and whether body contouring that rebuilds muscle and tightens skin is appropriate, and when.",
-    surgery:"Dr Wes works alongside a bariatric surgeon, so he sees both sides: what to do before surgery, and how to look after the body afterwards. The consultation maps where you are and what the right next step is, whether that is medical, surgical support or the skin and shape afterwards."
+    after:"This is the part of the journey most clinics cannot do. Loose skin, stubborn pockets and lost muscle tone after weight loss respond to a combination of approaches, and Dr Wesley looks at all of them in one room, from body contouring to the medical side.",
+    post:"Muscle separation and a weak core after pregnancy are a physical problem with a physical answer. Dr Wesley will assess what has happened and whether body contouring that rebuilds muscle and tightens skin is appropriate, and when.",
+    surgery:"Dr Wesley works alongside a bariatric surgeon, so he sees both sides: what to do before surgery, and how to look after the body afterwards. The consultation maps where you are and what the right next step is, whether that is medical, surgical support or the skin and shape afterwards."
   };
   const labels={start:"your weight loss journey",tried:"the weight that will not shift",after:"your skin and shape after weight loss",post:"your core after pregnancy",surgery:"your journey around bariatric surgery"};
-  document.getElementById('rTitle').textContent="Submit your details for Dr Wes's best hacks to support "+(labels[a.stage]||"your weight loss journey")+".";
+  document.getElementById('rTitle').textContent="Submit your details for Dr Wesley's best hacks to support "+(labels[a.stage]||"your weight loss journey")+".";
   document.getElementById('rBody').textContent=map[a.stage]||map.start;
+  if(a.tried==='glp1')document.getElementById('rBody').textContent+=" You mentioned you are on a GLP-1. Dr Wesley prescribes and reviews these himself, so the medication, the diet, and what happens to your skin and shape as the weight comes off are looked at together, by the doctor who knows your history.";
+  if(a.tried==='meds')document.getElementById('rBody').textContent+=" You mentioned you have tried weight loss medication before. Whether it is the right option now, and what sits around it, is a proper medical conversation, and it is the first thing Dr Wesley will look at.";
+  if(a.concern==='hormones')document.getElementById('rBody').textContent+=" And if you think hormones are part of it, say so at the consultation. Perimenopause, thyroid and PCOS change the whole picture, and a GP is the right person to look at them alongside the weight.";
   if(a.tried==='clinic')document.getElementById('rBody').textContent+=" You mentioned treatments at a beauty clinic. The difference here is a doctor who can look at the medical picture as well as the machine.";
 }
-function submitLead(){const fn=document.getElementById('fn').value.trim(),mob=document.getElementById('mob').value.trim();if(!fn||!mob){alert('Just your first name and mobile so Dr Wes can reach you.');return}console.log('lead',{...a,fn,mob,em:document.getElementById('em').value});go(8)}
+function submitLead(){const fn=document.getElementById('fn').value.trim(),mob=document.getElementById('mob').value.trim();if(!fn||!mob){alert('Just your first name and mobile so Dr Wesley can reach you.');return}console.log('lead',{...a,fn,mob,em:document.getElementById('em').value});go(8)}
 </script>
 </body>
 </html>
