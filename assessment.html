@@ -135,8 +135,8 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
 
   <section id="s7" hidden>
     <div class="step">Last step</div>
-    <h2 id="rTitle">Submit your details for Dr Wesley's best hacks to support your weight loss journey.</h2>
-    <p>Your plan lands in your inbox and your texts straight away: three things you can do at home right now, what Dr Wesley would look at first, and your invitation to book your consultation.</p>
+    <h2 id="rTitle">Submit your details for Dr Wesley's top 3 lifestyle changes that most weight loss programs miss.</h2>
+    <p>They land in your inbox and your texts straight away: water and clearing waste, stress reduction and sleep quality, done properly, plus what Dr Wesley would look at first for you and your invitation to book.</p>
     <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
     <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
     <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
@@ -148,7 +148,8 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
     <div class="step">Thank you</div>
     <h2>Check your texts and your inbox.</h2>
     <div class="result"><p id="rBody"></p></div>
-    <p class="lead">Three things you can do at home today have just gone to you by text and email, with your invitation to book. Everyone starts with a doctor-led consultation at the Sunnybank clinic, and nothing is decided before it.</p>
+    <div class="result"><p><strong style="font-weight:600">Dr Wesley's top 3, in the order to start:</strong><br>1. Water and clearing waste<br>2. Stress reduction<br>3. Sleep quality</p></div>
+    <p class="lead">The detail on all three has just gone to you by text and email, with your invitation to book. Everyone starts with a doctor-led consultation at the Sunnybank clinic, and nothing is decided before it.</p>
     <a class="btn" href="website.html#consult">Book my consultation</a>
     <p class="note">Shop 2/95 Mains Rd, Sunnybank &middot; One doctor for the whole journey</p>
   </section>
@@ -168,7 +169,6 @@ function render(){
     surgery:"Dr Wesley works alongside a bariatric surgeon, so he sees both sides: what to do before surgery, and how to look after the body afterwards. The consultation maps where you are and what the right next step is, whether that is medical, surgical support or the skin and shape afterwards."
   };
   const labels={start:"your weight loss journey",tried:"the weight that will not shift",after:"your skin and shape after weight loss",post:"your core after pregnancy",surgery:"your journey around bariatric surgery"};
-  document.getElementById('rTitle').textContent="Submit your details for Dr Wesley's best hacks to support "+(labels[a.stage]||"your weight loss journey")+".";
   document.getElementById('rBody').textContent=map[a.stage]||map.start;
   if(a.tried==='glp1')document.getElementById('rBody').textContent+=" You mentioned you are on a GLP-1. Dr Wesley prescribes and reviews these himself, so the medication, the diet, and what happens to your skin and shape as the weight comes off are looked at together, by the doctor who knows your history.";
   if(a.tried==='meds')document.getElementById('rBody').textContent+=" You mentioned you have tried weight loss medication before. Whether it is the right option now, and what sits around it, is a proper medical conversation, and it is the first thing Dr Wesley will look at.";

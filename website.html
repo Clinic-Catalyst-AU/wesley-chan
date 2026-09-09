@@ -163,7 +163,14 @@ footer .fine{border-top-color:rgba(242,237,228,.15)}
 header.hero .tag{margin:22px 0 0}
 .sub-h{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.2vw,26px);color:var(--gold-deep);margin:-8px 0 20px;line-height:1.3}
 video.portrait{background:#000;aspect-ratio:9/16;object-fit:contain}
-header.hero video.bg{width:100%;height:100%;object-fit:cover;object-position:center 40%;background:none;opacity:.42}
+header.hero video.bg{width:100%;height:100%;object-fit:cover;object-position:center 40%;background:none;opacity:.5}
+@media (max-width:900px){
+  header.hero video.bg{opacity:.7;object-position:center top}
+  header.hero .bg{opacity:.2}
+  header.hero .scrim{background:linear-gradient(180deg,rgba(73,56,41,.06) 0,rgba(73,56,41,.28) 30vh,rgba(73,56,41,.93) 42vh,rgba(73,56,41,.97) 100%)}
+  header.hero .wrap{padding-top:44vh}
+  header.hero h1,header.hero .tag,header.hero .eyebrow{text-shadow:0 1px 14px rgba(43,35,32,.55)}
+}
 @media (prefers-reduced-motion:reduce){header.hero video.bg{display:none}}
 </style>
 </head>
