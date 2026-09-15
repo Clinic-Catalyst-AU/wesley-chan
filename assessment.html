@@ -1,73 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Dr Wesley Chan - Where do I start?</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Faith Cosmetic &amp; Weight Loss | Where do I start?</title>
+<link rel="icon" type="image/png" href="assets/brand/faith-monogram-cream-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..500,0..100&family=Figtree:wght@300..600&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#8A9A7E;--gold-deep:#5F7055;--char:#493829;--char-2:#5C4A3A;--cream:#F5F0E8;--cream-2:#E8E0D2;--ink:#2B2320;--white:#FFFFFF;--pink:#E4106E;--pink-deep:#C50D5F;--sage-light:#DDE3D6;--lcream:#F2EDE4;}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-header{padding:24px;text-align:center;background:var(--char);color:var(--cream)}
-header .brand{font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-header .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,244,238,.7);margin-top:6px}
-main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 20px}
-.card{background:var(--white);width:100%;max-width:640px;padding:44px 40px;border:1px solid rgba(28,28,28,.08);box-shadow:0 20px 60px rgba(28,28,28,.08)}
-.progress{height:4px;background:var(--cream-2);margin-bottom:28px;overflow:hidden}
-.progress i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s ease}
-.step{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px}
-h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--char);line-height:1.15}
-h1{font-size:42px;margin-bottom:14px}
-h2{font-size:32px;margin-bottom:22px}
-p{font-size:15px;line-height:1.7;color:#4A4A4A}
+:root{
+  --orchid:#FBF8F3; --linen:#F5F0E8; --wall:#E8E0D2;
+  --choc:#493829; --choc-deep:#2F241A; --sage-deep:#5F7055; --sage-soft:#DDE3D6;
+  --pop:#D9622B; --pop-deep:#B64E1D; --pop-soft:#F4D8C8;
+  --ink:#2B2320; --mute:#6E6258; --line:rgba(73,56,41,.14);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif; --sans:'Figtree',-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light}
+body{font-family:var(--sans);background:var(--linen);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;width:620px;height:620px;border-radius:50%;background:var(--pop-soft);filter:blur(130px);opacity:.55;right:-240px;top:-200px;pointer-events:none;z-index:0}
+header{position:relative;z-index:1;border-bottom:1px solid var(--line);background:rgba(245,240,232,.9)}
+.bar{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:40px;width:auto}
+.brand b{display:block;font-family:var(--serif);font-weight:400;font-size:1.45rem;letter-spacing:.34em;color:var(--choc);line-height:1;font-variation-settings:"SOFT" 100,"opsz" 144}
+.brand small{display:block;font-size:.5rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);margin-top:6px;white-space:nowrap}
+.backsite{font-size:.8rem;font-weight:600;color:var(--choc);text-decoration:none;white-space:nowrap}
+.backsite:hover{color:var(--pop-deep)}
+main{position:relative;z-index:1;flex:1;display:flex;align-items:center;justify-content:center;padding:40px 16px}
+.card{background:var(--orchid);width:100%;max-width:660px;padding:44px 42px;border-radius:28px;border:1px solid var(--line);box-shadow:0 50px 100px -60px rgba(47,36,26,.45)}
+.progress{height:4px;border-radius:4px;background:var(--wall);margin-bottom:30px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--pop);transition:width .6s var(--ease)}
+.step{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--sage-deep);margin-bottom:14px}
+.step::before{content:"";width:22px;height:1px;background:currentColor;opacity:.6}
+h1,h2{font-family:var(--serif);font-weight:400;color:var(--choc-deep);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,6vw,3.3rem);margin-bottom:14px}
+h1 em{font-style:italic;font-weight:300;color:var(--pop)}
+h2{font-size:clamp(1.65rem,4.2vw,2.2rem);margin-bottom:22px}
+p{font-size:1rem;color:var(--mute);max-width:60ch}
 .lead{margin-bottom:28px}
+section{animation:in .5s var(--ease)}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .opts{display:grid;gap:10px}
-.opt{display:block;width:100%;text-align:left;background:var(--cream);border:1px solid rgba(28,28,28,.1);padding:16px 18px;font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all .15s}
-.opt:hover{border-color:var(--gold);background:var(--cream-2);transform:translateX(3px)}
-.btn{display:inline-block;background:var(--char);color:var(--gold);border:none;padding:16px 34px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;margin-top:8px}
-.btn:hover{background:var(--char-2)}
-.btn.gold{background:var(--gold);color:var(--char)}
-label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--char);margin:14px 0 6px}
-input{width:100%;padding:14px 16px;border:1px solid rgba(28,28,28,.2);background:var(--cream);font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink)}
-input:focus{outline:none;border-color:var(--gold)}
-.back{background:none;border:none;color:#8A8D8E;font-size:12px;letter-spacing:.1em;cursor:pointer;margin-top:18px;font-family:'Montserrat',sans-serif}
-.result{border-left:3px solid var(--gold);padding:14px 18px;background:var(--cream);margin:18px 0 22px}
-.result p{font-size:15px}
-.note{font-size:13px;color:#6B6E6F;margin-top:18px;line-height:1.6}
-footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A8D8E}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:14px;width:100%;text-align:left;background:var(--linen);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-family:var(--sans);font-size:1rem;color:var(--ink);cursor:pointer;transition:background .35s,border-color .35s,transform .35s var(--ease)}
+.opt::after{content:"\2192";color:var(--pop);flex:none}
+.opt:hover{background:var(--wall);border-color:rgba(217,98,43,.4);transform:translateX(4px)}
+.btn{display:inline-flex;align-items:center;gap:12px;border-radius:999px;border:1px solid var(--choc);background:var(--choc);color:var(--orchid);padding:1rem 1.8rem;font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:none;margin-top:8px;transition:background .4s,border-color .4s,color .4s}
+.btn:hover{background:var(--choc-deep);border-color:var(--choc-deep)}
+.btn.pop{background:var(--pop);border-color:var(--pop);color:var(--choc-deep)}
+.btn.pop:hover{background:var(--pop-deep);border-color:var(--pop-deep);color:var(--orchid)}
+.btn:focus-visible,.opt:focus-visible,.back:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--pop);outline-offset:3px}
+label{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--sage-deep);margin:14px 0 6px}
+input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--linen);font-family:var(--sans);font-size:1rem;color:var(--ink)}
+.err{display:none;margin-top:12px;font-size:.9rem;color:var(--pop-deep)}
+.back{background:none;border:none;color:var(--mute);font-size:.84rem;cursor:pointer;margin-top:18px;font-family:var(--sans)}
+.back:hover{color:var(--choc)}
+.result{border-radius:16px;padding:16px 20px;background:var(--linen);border:1px solid var(--line);border-left:3px solid var(--pop);margin:18px 0}
+.result p{color:var(--ink);max-width:none}
+.top3{list-style:none;counter-reset:t;display:grid;gap:8px;margin-top:10px}
+.top3 li{counter-increment:t;display:flex;align-items:center;gap:12px;font-size:1rem;color:var(--ink)}
+.top3 li::before{content:counter(t);font-family:var(--serif);font-style:italic;font-size:1.5rem;line-height:1;color:var(--pop);width:22px}
+.top3-k{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--sage-deep)}
+.note{font-size:.84rem;margin-top:18px}
+footer{position:relative;z-index:1;text-align:center;padding:22px 16px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 [hidden]{display:none!important}
-@media (max-width:560px){.card{padding:32px 22px}h1{font-size:34px}h2{font-size:26px}}
-
-.btn{color:var(--cream)} .btn.gold{background:var(--pink);color:#fff} .btn.gold:hover{background:var(--pink-deep)}
-header{background:var(--char)} header .brand{color:var(--lcream)} header .tag{color:rgba(242,237,228,.7)}
-header .mono{height:54px;display:block;margin:0 auto 10px}
-.progress i{background:var(--pink)} .result{border-left-color:var(--gold)} .opt:hover{border-color:var(--gold)}
+@media (max-width:560px){.card{padding:30px 22px;border-radius:22px}.brand b{font-size:1.2rem}.brand img{height:34px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header><img class="mono" src="assets/brand/faith-monogram-cream.svg" alt=""><div class="brand">Dr Wesley Chan</div><div class="tag">Weight loss and body transformation, led by a doctor &middot; Sunnybank, Brisbane</div></header>
+<header>
+  <div class="bar">
+    <a class="brand" href="website.html" aria-label="Faith Cosmetic and Weight Loss home"><img src="assets/brand/faith-monogram.svg" alt=""><span><b>FAITH</b><small>Cosmetic &amp; Weight Loss</small></span></a>
+    <a class="backsite" href="website.html">&larr; Back to the website</a>
+  </div>
+</header>
 <main>
 <div class="card">
-  <div class="progress"><i id="bar"></i></div>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
 
   <section id="s0">
     <div class="step">60 seconds &middot; No judgement</div>
-    <h1>Where do I start?</h1>
+    <h1>Where do I <em>start?</em></h1>
     <p class="lead">Six quick questions about where you are and what you have tried. Dr Wesley reads every one and tells you what he would look at first. Nothing is prescribed here, and nothing is sold. It is the beginning of a conversation with a doctor.</p>
-    <button class="btn" onclick="go(1)">Start</button>
+    <button class="btn pop" type="button" onclick="go(1)">Start <span aria-hidden="true">&rarr;</span></button>
   </section>
 
   <section id="s1" hidden>
     <div class="step">1 of 6</div>
     <h2>Where are you in your journey right now?</h2>
     <div class="opts">
-      <button class="opt" onclick="pick('stage','start')">I want to lose weight and I honestly do not know where to start</button>
-      <button class="opt" onclick="pick('stage','tried')">I have tried diet and exercise, properly, and the weight will not shift</button>
-      <button class="opt" onclick="pick('stage','after')">I have lost weight and now the skin or shape is not following</button>
-      <button class="opt" onclick="pick('stage','post')">I have had a baby and my core and tummy have not recovered</button>
-      <button class="opt" onclick="pick('stage','surgery')">I am considering, or have had, bariatric surgery</button>
+      <button class="opt" type="button" onclick="pick('stage','start')">I want to lose weight and I honestly do not know where to start</button>
+      <button class="opt" type="button" onclick="pick('stage','tried')">I have tried diet and exercise, properly, and the weight will not shift</button>
+      <button class="opt" type="button" onclick="pick('stage','after')">I have lost weight and now the skin or shape is not following</button>
+      <button class="opt" type="button" onclick="pick('stage','post')">I have had a baby and my core and tummy have not recovered</button>
+      <button class="opt" type="button" onclick="pick('stage','surgery')">I am considering, or have had, bariatric surgery</button>
     </div>
   </section>
 
@@ -75,90 +105,93 @@ header .mono{height:54px;display:block;margin:0 auto 10px}
     <div class="step">2 of 6</div>
     <h2>What have you tried so far?</h2>
     <div class="opts">
-      <button class="opt" onclick="pick('tried','nothing')">Nothing structured yet</button>
-      <button class="opt" onclick="pick('tried','diets')">Diets and exercise programmes, more than one</button>
-      <button class="opt" onclick="pick('tried','gp')">I have spoken to a GP about medication</button>
-      <button class="opt" onclick="pick('tried','glp1')">I am currently taking a GLP-1</button>
-      <button class="opt" onclick="pick('tried','meds')">I have tried weight loss medication before</button>
-      <button class="opt" onclick="pick('tried','clinic')">Body contouring or treatments at a beauty clinic</button>
+      <button class="opt" type="button" onclick="pick('tried','nothing')">Nothing structured yet</button>
+      <button class="opt" type="button" onclick="pick('tried','diets')">Diets and exercise programmes, more than one</button>
+      <button class="opt" type="button" onclick="pick('tried','gp')">I have spoken to a GP about medication</button>
+      <button class="opt" type="button" onclick="pick('tried','glp1')">I am currently taking a GLP-1</button>
+      <button class="opt" type="button" onclick="pick('tried','meds')">I have tried weight loss medication before</button>
+      <button class="opt" type="button" onclick="pick('tried','clinic')">Body contouring or treatments at a beauty clinic</button>
     </div>
-    <button class="back" onclick="go(1)">&larr; Back</button>
+    <button class="back" type="button" onclick="go(1)">&larr; Back</button>
   </section>
 
   <section id="s3" hidden>
     <div class="step">3 of 6</div>
     <h2>What bothers you most?</h2>
     <div class="opts">
-      <button class="opt" onclick="pick('concern','stuck')">The number will not move no matter what I do</button>
-      <button class="opt" onclick="pick('concern','pockets')">Stubborn areas: tummy, flanks, arms, inner thighs</button>
-      <button class="opt" onclick="pick('concern','loose')">Loose skin where the weight used to be</button>
-      <button class="opt" onclick="pick('concern','core')">A weak core or separated muscles after pregnancy</button>
-      <button class="opt" onclick="pick('concern','hormones')">I think my hormones are part of this: perimenopause, thyroid, PCOS</button>
-      <button class="opt" onclick="pick('concern','energy')">Tired, frustrated, and not sure who to trust</button>
+      <button class="opt" type="button" onclick="pick('concern','stuck')">The number will not move no matter what I do</button>
+      <button class="opt" type="button" onclick="pick('concern','pockets')">Stubborn areas: tummy, flanks, arms, inner thighs</button>
+      <button class="opt" type="button" onclick="pick('concern','loose')">Loose skin where the weight used to be</button>
+      <button class="opt" type="button" onclick="pick('concern','core')">A weak core or separated muscles after pregnancy</button>
+      <button class="opt" type="button" onclick="pick('concern','hormones')">I think my hormones are part of this: perimenopause, thyroid, PCOS</button>
+      <button class="opt" type="button" onclick="pick('concern','energy')">Tired, frustrated, and not sure who to trust</button>
     </div>
-    <button class="back" onclick="go(2)">&larr; Back</button>
+    <button class="back" type="button" onclick="go(2)">&larr; Back</button>
   </section>
 
   <section id="s4" hidden>
     <div class="step">4 of 6</div>
     <h2>How long has this been going on?</h2>
     <div class="opts">
-      <button class="opt" onclick="pick('length','months')">A few months</button>
-      <button class="opt" onclick="pick('length','year')">About a year</button>
-      <button class="opt" onclick="pick('length','years')">Years. It has become normal</button>
+      <button class="opt" type="button" onclick="pick('length','months')">A few months</button>
+      <button class="opt" type="button" onclick="pick('length','year')">About a year</button>
+      <button class="opt" type="button" onclick="pick('length','years')">Years. It has become normal</button>
     </div>
-    <button class="back" onclick="go(3)">&larr; Back</button>
+    <button class="back" type="button" onclick="go(3)">&larr; Back</button>
   </section>
 
   <section id="s5" hidden>
     <div class="step">5 of 6</div>
     <h2>If this were sorted, what would change?</h2>
     <div class="opts">
-      <button class="opt" onclick="pick('why','health')">My health. I want to get ahead of what is coming</button>
-      <button class="opt" onclick="pick('why','clothes')">I would wear what I want to wear</button>
-      <button class="opt" onclick="pick('why','confidence')">I would feel like myself again</button>
-      <button class="opt" onclick="pick('why','done')">I would stop starting over every January</button>
+      <button class="opt" type="button" onclick="pick('why','health')">My health. I want to get ahead of what is coming</button>
+      <button class="opt" type="button" onclick="pick('why','clothes')">I would wear what I want to wear</button>
+      <button class="opt" type="button" onclick="pick('why','confidence')">I would feel like myself again</button>
+      <button class="opt" type="button" onclick="pick('why','done')">I would stop starting over every January</button>
     </div>
-    <button class="back" onclick="go(4)">&larr; Back</button>
+    <button class="back" type="button" onclick="go(4)">&larr; Back</button>
   </section>
 
   <section id="s6" hidden>
     <div class="step">6 of 6</div>
     <h2>When would you like to talk to a doctor about it?</h2>
     <div class="opts">
-      <button class="opt" onclick="pick('when','now')">As soon as possible</button>
-      <button class="opt" onclick="pick('when','month')">In the next month or so</button>
-      <button class="opt" onclick="pick('when','looking')">Just finding out what is possible for now</button>
+      <button class="opt" type="button" onclick="pick('when','now')">As soon as possible</button>
+      <button class="opt" type="button" onclick="pick('when','month')">In the next month or so</button>
+      <button class="opt" type="button" onclick="pick('when','looking')">Just finding out what is possible for now</button>
     </div>
-    <button class="back" onclick="go(5)">&larr; Back</button>
+    <button class="back" type="button" onclick="go(5)">&larr; Back</button>
   </section>
 
   <section id="s7" hidden>
     <div class="step">Last step</div>
     <h2 id="rTitle">Submit your details for Dr Wesley's top 3 lifestyle changes that most weight loss programs miss.</h2>
     <p>They land in your inbox and your texts straight away: water and clearing waste, stress reduction and sleep quality, done properly, plus what Dr Wesley would look at first for you and your invitation to book.</p>
-    <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name">
-    <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04..">
-    <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com">
-    <button class="btn gold" onclick="submitLead()">Send to Dr Wesley</button>
+    <label for="fn">First name</label><input id="fn" type="text" placeholder="Your first name" autocomplete="given-name">
+    <label for="mob">Mobile</label><input id="mob" type="tel" placeholder="04.." autocomplete="tel">
+    <label for="em">Email</label><input id="em" type="email" placeholder="you@email.com" autocomplete="email">
+    <button class="btn pop" type="button" onclick="submitLead()">Send to Dr Wesley <span aria-hidden="true">&rarr;</span></button>
+    <p class="err" id="err" role="alert">Just your first name and mobile so Dr Wesley can reach you.</p>
     <p class="note">By sending, you agree to hear from Faith Cosmetic &amp; Weight Loss by text and email. Unsubscribe any time. This assessment is general information only and is not medical advice; suitability for any treatment is decided at consultation.</p>
+    <button class="back" type="button" onclick="go(6)">&larr; Back</button>
   </section>
 
   <section id="s8" hidden>
     <div class="step">Thank you</div>
     <h2>Check your texts and your inbox.</h2>
     <div class="result"><p id="rBody"></p></div>
-    <div class="result"><p><strong style="font-weight:600">Dr Wesley's top 3, in the order to start:</strong><br>1. Water and clearing waste<br>2. Stress reduction<br>3. Sleep quality</p></div>
+    <div class="result"><span class="top3-k">Dr Wesley's top 3, in the order to start</span><ol class="top3"><li>Water and clearing waste</li><li>Stress reduction</li><li>Sleep quality</li></ol></div>
     <p class="lead">The detail on all three has just gone to you by text and email, with your invitation to book. Everyone starts with a doctor-led consultation at the Sunnybank clinic, and nothing is decided before it.</p>
-    <a class="btn" href="website.html#consult">Book my consultation</a>
+    <a class="btn pop" href="website.html#consult">Book my consultation <span aria-hidden="true">&rarr;</span></a>
     <p class="note">Shop 2/95 Mains Rd, Sunnybank &middot; One doctor for the whole journey</p>
   </section>
 </div>
 </main>
-<footer>Demo built by Clinic Catalyst for Dr Wesley Chan</footer>
+<footer>Concept by Clinic Catalyst for Faith Cosmetic &amp; Weight Loss</footer>
 <script>
 const a={};
-function go(n){for(let i=0;i<=8;i++){const s=document.getElementById('s'+i);if(s)s.hidden=(i!==n)}document.getElementById('bar').style.width=Math.min(100,Math.round((n/7)*100))+'%';window.scrollTo({top:0,behavior:'smooth'})}
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function go(n){for(let i=0;i<=8;i++){const s=document.getElementById('s'+i);if(s)s.hidden=(i!==n)}document.getElementById('bar').style.width=Math.min(100,Math.round((n/7)*100))+'%';window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})}
 function pick(k,v){a[k]=v;const order={stage:2,tried:3,concern:4,length:5,why:6,when:7};if(k==='when')render();go(order[k])}
 function render(){
   const map={
@@ -168,14 +201,14 @@ function render(){
     post:"Muscle separation and a weak core after pregnancy are a physical problem with a physical answer. Dr Wesley will assess what has happened and whether body contouring that rebuilds muscle and tightens skin is appropriate, and when.",
     surgery:"Dr Wesley works alongside a bariatric surgeon, so he sees both sides: what to do before surgery, and how to look after the body afterwards. The consultation maps where you are and what the right next step is, whether that is medical, surgical support or the skin and shape afterwards."
   };
-  const labels={start:"your weight loss journey",tried:"the weight that will not shift",after:"your skin and shape after weight loss",post:"your core after pregnancy",surgery:"your journey around bariatric surgery"};
-  document.getElementById('rBody').textContent=map[a.stage]||map.start;
-  if(a.tried==='glp1')document.getElementById('rBody').textContent+=" You mentioned you are on a GLP-1. Dr Wesley prescribes and reviews these himself, so the medication, the diet, and what happens to your skin and shape as the weight comes off are looked at together, by the doctor who knows your history.";
-  if(a.tried==='meds')document.getElementById('rBody').textContent+=" You mentioned you have tried weight loss medication before. Whether it is the right option now, and what sits around it, is a proper medical conversation, and it is the first thing Dr Wesley will look at.";
-  if(a.concern==='hormones')document.getElementById('rBody').textContent+=" And if you think hormones are part of it, say so at the consultation. Perimenopause, thyroid and PCOS change the whole picture, and a GP is the right person to look at them alongside the weight.";
-  if(a.tried==='clinic')document.getElementById('rBody').textContent+=" You mentioned treatments at a beauty clinic. The difference here is a doctor who can look at the medical picture as well as the machine.";
+  const el=document.getElementById('rBody');
+  el.textContent=map[a.stage]||map.start;
+  if(a.tried==='glp1')el.textContent+=" You mentioned you are on a GLP-1. Dr Wesley prescribes and reviews these himself, so the medication, the diet, and what happens to your skin and shape as the weight comes off are looked at together, by the doctor who knows your history.";
+  if(a.tried==='meds')el.textContent+=" You mentioned you have tried weight loss medication before. Whether it is the right option now, and what sits around it, is a proper medical conversation, and it is the first thing Dr Wesley will look at.";
+  if(a.concern==='hormones')el.textContent+=" And if you think hormones are part of it, say so at the consultation. Perimenopause, thyroid and PCOS change the whole picture, and a GP is the right person to look at them alongside the weight.";
+  if(a.tried==='clinic')el.textContent+=" You mentioned treatments at a beauty clinic. The difference here is a doctor who can look at the medical picture as well as the machine.";
 }
-function submitLead(){const fn=document.getElementById('fn').value.trim(),mob=document.getElementById('mob').value.trim();if(!fn||!mob){alert('Just your first name and mobile so Dr Wesley can reach you.');return}console.log('lead',{...a,fn,mob,em:document.getElementById('em').value});go(8)}
+function submitLead(){const fn=document.getElementById('fn').value.trim(),mob=document.getElementById('mob').value.trim();const err=document.getElementById('err');if(!fn||!mob){err.style.display='block';return}err.style.display='none';console.log('lead',{...a,fn,mob,em:document.getElementById('em').value});go(8)}
 </script>
 </body>
 </html>

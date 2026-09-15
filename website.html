@@ -301,7 +301,8 @@ footer img{width:190px;margin-bottom:6px}
 .mbar a.book{background:var(--pop);border-color:var(--pop);color:var(--choc-deep)}
 @media (max-width:860px){.mbar{display:grid}}
 body.menu-open .mbar{transform:translateY(140%)!important}
-.concept{position:fixed;left:16px;bottom:16px;z-index:45;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;background:var(--orchid);color:var(--choc);border:1px solid var(--line);padding:7px 12px;border-radius:999px;box-shadow:0 10px 30px -15px rgba(0,0,0,.3)}
+.concept{position:fixed;left:16px;bottom:16px;z-index:45;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;background:var(--orchid);color:var(--choc);border:1px solid var(--line);padding:7px 12px;border-radius:999px;box-shadow:0 10px 30px -15px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease),visibility .5s}
+.concept.show{opacity:1;visibility:visible;transform:none}
 @media (max-width:860px){.concept{display:none}}
 .chatfab{position:fixed;right:22px;bottom:22px;z-index:48;width:62px;height:62px;border-radius:50%;border:0;background:var(--choc);color:var(--orchid);display:grid;place-items:center;cursor:pointer;box-shadow:0 20px 40px -18px rgba(0,0,0,.5);transition:transform .4s var(--ease)}
 .chatfab:hover{transform:translateY(-3px)}
@@ -641,8 +642,8 @@ body.menu-open .mbar{transform:translateY(140%)!important}
   if (reduce || !io) rv.forEach(function(e){ e.classList.add('in'); });
   else { var o = new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); o.unobserve(x.target); } }); },{rootMargin:'0px 0px -8% 0px',threshold:.1}); rv.forEach(function(e){ o.observe(e); }); }
 
-  var mbar = document.getElementById('mbar');
-  function onScroll(){ var y = window.scrollY; document.body.classList.toggle('scrolled', y > 60); mbar.classList.toggle('show', y > window.innerHeight * .6); }
+  var mbar = document.getElementById('mbar'), badge = document.querySelector('.concept'), hero = document.querySelector('.hero');
+  function onScroll(){ var y = window.scrollY; document.body.classList.toggle('scrolled', y > 60); mbar.classList.toggle('show', y > window.innerHeight * .6); if (badge && hero) badge.classList.toggle('show', hero.getBoundingClientRect().bottom < 0); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   var steps = document.querySelectorAll('.step'), pics = document.querySelectorAll('.jpic img'), cnt = document.querySelector('.jpic .count'), bar = document.querySelector('.jpic .bar');
